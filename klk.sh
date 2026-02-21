@@ -13,7 +13,7 @@ ip_broadcast="${ip_input%.*}."
 for ((i=1; i<=254; i++)); do
 {
     ip="${ip_broadcast}${i}"
-    ttl=$(timeout 0.5 ping -c 1 "$ip" 2>/dev/null | grep -o 'ttl=[0-9]\+' | grep -o '[0-9]\+')
+    ttl=$(timeout 0.9 ping -c 1 "$ip" 2>/dev/null | grep -o 'ttl=[0-9]\+' | grep -o '[0-9]\+')
 
     if [[ -n $ttl ]]; then
         if (( ttl <= 64 )); then

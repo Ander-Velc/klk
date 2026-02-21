@@ -1,5 +1,5 @@
 # klk
-klk is a simple and fast host discovery script made in bash
+klk is a simple and fast host and OS discovery script made in bash
 
 `klk <ip>`
 
